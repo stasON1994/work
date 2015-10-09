@@ -1,0 +1,35 @@
+# work
+<html>
+  <head>
+    <title>HTML документ</title> 
+  </head> 
+  <body> 
+	<table id="tbl">
+		<tr>
+			<td>Поле 1.</td>
+			<td>Поле 2.</td>
+			<td>Поле 3.</td>
+		</tr>
+	</table>
+	<br>
+	<br>
+	Поле 1:<input type="text" id="txt1">
+	Поле 2:<input type="text" id="txt2">
+	Поле 3:<input type="text" id="txt3">
+	<input type="button" id="but" value="Кнопка" onclick="AddToCart()">
+	<script language="JavaScript">
+		var tbl = document.getElementById('tbl');
+		function AddToCart() {
+  var qty1 = document.getElementById('txt1').value;
+  var qty2 = document.getElementById('txt2').value;
+  var qty3 = document.getElementById('txt3').value;
+  var oRow = tbl.tBodies[0].insertRow(-1);
+ /* oRow.insertCell(-1).innerHTML = oList.options[oList.selectedIndex].text;*/
+  oRow.insertCell(-1).innerHTML = qty1;
+  oRow.insertCell(-1).innerHTML = qty2;
+  oRow.insertCell(-1).innerHTML = qty3;
+}
+
+	</script>
+  </body> 
+</html>
